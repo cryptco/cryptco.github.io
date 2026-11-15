@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem('cryptco_theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <title>Price of 1 ETH — Ethereum Price in USD Today | Cryptco</title>
-<meta name="description" content="The current price of 1 Ethereum (ETH) is $1,832.60. See live ETH price in USD, convert ETH to USD and USD to ETH.">
+<meta name="description" content="The current price of 1 Ethereum (ETH) is $1,817.55. Convert ETH to USD and USD to ETH instantly.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://cryptco.github.io/price-of-1-eth/">
 <link rel="alternate" hreflang="en" href="https://cryptco.github.io/price-of-1-eth/">
@@ -12,12 +14,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cryptco">
 <meta property="og:title" content="Price of 1 ETH — Ethereum Price in USD Today | Cryptco">
-<meta property="og:description" content="The current price of 1 Ethereum (ETH) is $1,832.60. See live ETH price in USD, convert ETH to USD and USD to ETH.">
+<meta property="og:description" content="The current price of 1 Ethereum (ETH) is $1,817.55. Convert ETH to USD and USD to ETH instantly.">
 <meta property="og:url" content="https://cryptco.github.io/price-of-1-eth/">
 <meta property="og:image" content="https://cryptco.github.io/static/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Price of 1 ETH — Ethereum Price in USD Today | Cryptco">
-<meta name="twitter:description" content="The current price of 1 Ethereum (ETH) is $1,832.60. See live ETH price in USD, convert ETH to USD and USD to ETH.">
+<meta name="twitter:description" content="The current price of 1 Ethereum (ETH) is $1,817.55. Convert ETH to USD and USD to ETH instantly.">
 <meta name="twitter:image" content="https://cryptco.github.io/static/og-default.png">
 
 <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
@@ -26,50 +28,54 @@
 <link rel="dns-prefetch" href="https://cryptco-prices.samundrana.workers.dev">
 <script>window.CRYPTCO_CONFIG={"endpoint": "https://cryptco-prices.samundrana.workers.dev/prices.json", "pollSeconds": 10, "clientCacheSeconds": 8};</script>
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Ethereum", "description": "Live Ethereum (ETH) price in USD", "brand": {"@type": "Brand", "name": "Ethereum"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "1832.59567100", "priceValidUntil": "2026-11-16", "url": "https://cryptco.github.io/price-of-1-eth/", "availability": "https://schema.org/InStock"}, "url": "https://cryptco.github.io/price-of-1-eth/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Ethereum", "description": "Live Ethereum (ETH) price in USD", "brand": {"@type": "Brand", "name": "Ethereum"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "1817.55130392", "priceValidUntil": "2026-11-16", "url": "https://cryptco.github.io/price-of-1-eth/", "availability": "https://schema.org/InStock"}, "url": "https://cryptco.github.io/price-of-1-eth/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptco.github.io/"}, {"@type": "ListItem", "position": 2, "name": "ETH price", "item": "https://cryptco.github.io/price-of-1-eth/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the price of 1 ETH?", "acceptedAnswer": {"@type": "Answer", "text": "1 ETH currently costs $1,832.60."}}, {"@type": "Question", "name": "What is the price of ETH today?", "acceptedAnswer": {"@type": "Answer", "text": "Ethereum (ETH) is priced at $1,832.60 today."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the price of 1 ETH?", "acceptedAnswer": {"@type": "Answer", "text": "1 ETH currently costs $1,817.55."}}, {"@type": "Question", "name": "What is the price of ETH today?", "acceptedAnswer": {"@type": "Answer", "text": "Ethereum (ETH) is priced at $1,817.55 today."}}]}</script>
 
 </head>
 <body data-site="https://cryptco.github.io"><header>
 <a class="brand" href="/">Cryptco<span>.</span></a>
-<nav><a href="/">Home</a> &nbsp; <a href="/sitemap.xml">All prices</a></nav>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle light / dark">
+<span class="theme-icon" aria-hidden="true"></span>
+</button>
 </header>
-<div class="wrap"><section>
-<div class="crumbs"><a href="/">Home</a> / ETH price</div>
+<div class="wrap">
+<section class="hero">
 <h1>Price of 1 ETH</h1>
 <p class="sub">Current Ethereum (ETH) price in USD, updated live.</p>
-
-<div class="card hero">
-<div class="conv">
-<label class="field"><span>Amount (ETH)</span>
-<input type="text" inputmode="decimal" class="conv-amount" data-conv-amount value="1" autocomplete="off" spellcheck="false"></label>
-<label class="field"><span>Price of 1 ETH (USD)</span>
-<input type="text" inputmode="decimal" class="conv-price" data-conv-price data-symbol="ETH" value="1832.595671" autocomplete="off" spellcheck="false"></label>
+<div class="tool" data-conv data-symbol="ETH">
+<div class="tool-field coin-field">
+<label for="coinSearch">Coin</label>
+<div class="coin-picker">
+<input id="coinSearch" class="coin-search" type="text" autocomplete="off" spellcheck="false"
+ placeholder="Search coin…" aria-label="Search or choose a coin">
+<select class="coin-select" data-conv-coin aria-label="Coin"><option value="TRX" data-name="TRON">TRON (TRX)</option><option value="BTC" data-name="Bitcoin">Bitcoin (BTC)</option><option value="ETH" data-name="Ethereum" selected>Ethereum (ETH)</option><option value="USDT" data-name="Tether">Tether (USDT)</option><option value="BNB" data-name="BNB">BNB (BNB)</option></select>
 </div>
-<div class="result" data-conv-result data-mode="coin" data-symbol="ETH">—</div>
-<p class="rate"><span class="live"></span>Edit the amount or price above to convert instantly</p>
 </div>
-<div class="card"><h2>Convert ETH to USD</h2>
-<div class="grid"><a href="/1-eth-to-usd/">1 ETH</a><a href="/5-eth-to-usd/">5 ETH</a><a href="/10-eth-to-usd/">10 ETH</a><a href="/20-eth-to-usd/">20 ETH</a><a href="/50-eth-to-usd/">50 ETH</a><a href="/100-eth-to-usd/">100 ETH</a><a href="/500-eth-to-usd/">500 ETH</a><a href="/1000-eth-to-usd/">1,000 ETH</a><a href="/5000-eth-to-usd/">5,000 ETH</a><a href="/10000-eth-to-usd/">10,000 ETH</a></div>
+<div class="tool-field">
+<label for="coinAmount">Amount in <span data-coin-label>ETH</span></label>
+<input id="coinAmount" class="tool-input" type="text" inputmode="decimal" data-conv-coin-amount
+ value="1" autocomplete="off" spellcheck="false" placeholder="0">
 </div>
-<div class="card"><h2>Convert USD to ETH</h2>
-<div class="grid"><a href="/1-usd-to-eth/">$1</a><a href="/2-usd-to-eth/">$2</a><a href="/5-usd-to-eth/">$5</a><a href="/10-usd-to-eth/">$10</a><a href="/20-usd-to-eth/">$20</a><a href="/25-usd-to-eth/">$25</a><a href="/30-usd-to-eth/">$30</a><a href="/40-usd-to-eth/">$40</a><a href="/50-usd-to-eth/">$50</a><a href="/60-usd-to-eth/">$60</a><a href="/70-usd-to-eth/">$70</a><a href="/80-usd-to-eth/">$80</a><a href="/90-usd-to-eth/">$90</a><a href="/100-usd-to-eth/">$100</a><a href="/200-usd-to-eth/">$200</a><a href="/500-usd-to-eth/">$500</a><a href="/1000-usd-to-eth/">$1,000</a></div>
+<div class="tool-field">
+<label for="usdAmount">Amount in USD</label>
+<input id="usdAmount" class="tool-input" type="text" inputmode="decimal" data-conv-usd-amount
+ value="1817.55" autocomplete="off" spellcheck="false" placeholder="0">
 </div>
-<div class="card"><h2>Other coins</h2>
-<p class="rate">Check the price of 1 of other popular cryptocurrencies:</p>
-<div class="grid"><a href="/price-of-1-trx/">Price of 1 <b>TRX</b></a><a href="/price-of-1-btc/">Price of 1 <b>BTC</b></a><a href="/price-of-1-usdt/">Price of 1 <b>USDT</b></a><a href="/price-of-1-bnb/">Price of 1 <b>BNB</b></a></div>
+<div class="rate-line">
+<span class="live" aria-hidden="true"></span>
+<span class="rate-text">1 <b data-coin-label>ETH</b> =</span>
+<span class="rate-price-wrap">$<input class="rate-price-input" type="text" inputmode="decimal"
+ data-conv-price data-symbol="ETH" value="1817.551304"
+ autocomplete="off" spellcheck="false" aria-label="Price of 1 coin in USD"></span>
+<span class="rate-cur">USD</span>
 </div>
-
-<div class="card"><h2>Frequently asked questions</h2>
-<dl class="faq">
-<dt>What is the price of 1 ETH?</dt>
-<dd>1 ETH currently costs $1,832.60.</dd>
-<dt>What is the price of ETH today?</dt>
-<dd>Ethereum (ETH) is priced at $1,832.60 today.</dd>
-</dl>
 </div>
-</section></div>
+</section>
+<section class="about">
+<h2>About</h2><p>Convert popular cryptocurrencies to USD and back with live prices. Fast, free, no signup.</p><p>Prices update automatically from live market data and are provided for informational purposes only — not financial advice.</p>
+</section>
+</div>
 <footer>Prices are for informational purposes only. Not financial advice.<br>© 2026 Cryptco</footer>
 <script src="/static/app.js" defer></script>
 </body></html>

@@ -3,8 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem('cryptco_theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <title>Price of 1 BTC — Bitcoin Price in USD Today | Cryptco</title>
-<meta name="description" content="The current price of 1 Bitcoin (BTC) is $65,498.90. See live BTC price in USD, convert BTC to USD and USD to BTC.">
+<meta name="description" content="The current price of 1 Bitcoin (BTC) is $65,159.76. Convert BTC to USD and USD to BTC instantly.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://cryptco.github.io/price-of-1-btc/">
 <link rel="alternate" hreflang="en" href="https://cryptco.github.io/price-of-1-btc/">
@@ -12,12 +14,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cryptco">
 <meta property="og:title" content="Price of 1 BTC — Bitcoin Price in USD Today | Cryptco">
-<meta property="og:description" content="The current price of 1 Bitcoin (BTC) is $65,498.90. See live BTC price in USD, convert BTC to USD and USD to BTC.">
+<meta property="og:description" content="The current price of 1 Bitcoin (BTC) is $65,159.76. Convert BTC to USD and USD to BTC instantly.">
 <meta property="og:url" content="https://cryptco.github.io/price-of-1-btc/">
 <meta property="og:image" content="https://cryptco.github.io/static/og-default.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Price of 1 BTC — Bitcoin Price in USD Today | Cryptco">
-<meta name="twitter:description" content="The current price of 1 Bitcoin (BTC) is $65,498.90. See live BTC price in USD, convert BTC to USD and USD to BTC.">
+<meta name="twitter:description" content="The current price of 1 Bitcoin (BTC) is $65,159.76. Convert BTC to USD and USD to BTC instantly.">
 <meta name="twitter:image" content="https://cryptco.github.io/static/og-default.png">
 
 <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
@@ -26,50 +28,54 @@
 <link rel="dns-prefetch" href="https://cryptco-prices.samundrana.workers.dev">
 <script>window.CRYPTCO_CONFIG={"endpoint": "https://cryptco-prices.samundrana.workers.dev/prices.json", "pollSeconds": 10, "clientCacheSeconds": 8};</script>
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Bitcoin", "description": "Live Bitcoin (BTC) price in USD", "brand": {"@type": "Brand", "name": "Bitcoin"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "65498.89621825", "priceValidUntil": "2026-11-16", "url": "https://cryptco.github.io/price-of-1-btc/", "availability": "https://schema.org/InStock"}, "url": "https://cryptco.github.io/price-of-1-btc/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Bitcoin", "description": "Live Bitcoin (BTC) price in USD", "brand": {"@type": "Brand", "name": "Bitcoin"}, "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "65159.76486785", "priceValidUntil": "2026-11-16", "url": "https://cryptco.github.io/price-of-1-btc/", "availability": "https://schema.org/InStock"}, "url": "https://cryptco.github.io/price-of-1-btc/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cryptco.github.io/"}, {"@type": "ListItem", "position": 2, "name": "BTC price", "item": "https://cryptco.github.io/price-of-1-btc/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the price of 1 BTC?", "acceptedAnswer": {"@type": "Answer", "text": "1 BTC currently costs $65,498.90."}}, {"@type": "Question", "name": "What is the price of BTC today?", "acceptedAnswer": {"@type": "Answer", "text": "Bitcoin (BTC) is priced at $65,498.90 today."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the price of 1 BTC?", "acceptedAnswer": {"@type": "Answer", "text": "1 BTC currently costs $65,159.76."}}, {"@type": "Question", "name": "What is the price of BTC today?", "acceptedAnswer": {"@type": "Answer", "text": "Bitcoin (BTC) is priced at $65,159.76 today."}}]}</script>
 
 </head>
 <body data-site="https://cryptco.github.io"><header>
 <a class="brand" href="/">Cryptco<span>.</span></a>
-<nav><a href="/">Home</a> &nbsp; <a href="/sitemap.xml">All prices</a></nav>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle light / dark">
+<span class="theme-icon" aria-hidden="true"></span>
+</button>
 </header>
-<div class="wrap"><section>
-<div class="crumbs"><a href="/">Home</a> / BTC price</div>
+<div class="wrap">
+<section class="hero">
 <h1>Price of 1 BTC</h1>
 <p class="sub">Current Bitcoin (BTC) price in USD, updated live.</p>
-
-<div class="card hero">
-<div class="conv">
-<label class="field"><span>Amount (BTC)</span>
-<input type="text" inputmode="decimal" class="conv-amount" data-conv-amount value="1" autocomplete="off" spellcheck="false"></label>
-<label class="field"><span>Price of 1 BTC (USD)</span>
-<input type="text" inputmode="decimal" class="conv-price" data-conv-price data-symbol="BTC" value="65498.89622" autocomplete="off" spellcheck="false"></label>
+<div class="tool" data-conv data-symbol="BTC">
+<div class="tool-field coin-field">
+<label for="coinSearch">Coin</label>
+<div class="coin-picker">
+<input id="coinSearch" class="coin-search" type="text" autocomplete="off" spellcheck="false"
+ placeholder="Search coin…" aria-label="Search or choose a coin">
+<select class="coin-select" data-conv-coin aria-label="Coin"><option value="TRX" data-name="TRON">TRON (TRX)</option><option value="BTC" data-name="Bitcoin" selected>Bitcoin (BTC)</option><option value="ETH" data-name="Ethereum">Ethereum (ETH)</option><option value="USDT" data-name="Tether">Tether (USDT)</option><option value="BNB" data-name="BNB">BNB (BNB)</option></select>
 </div>
-<div class="result" data-conv-result data-mode="coin" data-symbol="BTC">—</div>
-<p class="rate"><span class="live"></span>Edit the amount or price above to convert instantly</p>
 </div>
-<div class="card"><h2>Convert BTC to USD</h2>
-<div class="grid"><a href="/1-btc-to-usd/">1 BTC</a><a href="/5-btc-to-usd/">5 BTC</a><a href="/10-btc-to-usd/">10 BTC</a><a href="/20-btc-to-usd/">20 BTC</a><a href="/50-btc-to-usd/">50 BTC</a><a href="/100-btc-to-usd/">100 BTC</a><a href="/500-btc-to-usd/">500 BTC</a><a href="/1000-btc-to-usd/">1,000 BTC</a><a href="/5000-btc-to-usd/">5,000 BTC</a><a href="/10000-btc-to-usd/">10,000 BTC</a></div>
+<div class="tool-field">
+<label for="coinAmount">Amount in <span data-coin-label>BTC</span></label>
+<input id="coinAmount" class="tool-input" type="text" inputmode="decimal" data-conv-coin-amount
+ value="1" autocomplete="off" spellcheck="false" placeholder="0">
 </div>
-<div class="card"><h2>Convert USD to BTC</h2>
-<div class="grid"><a href="/1-usd-to-btc/">$1</a><a href="/2-usd-to-btc/">$2</a><a href="/5-usd-to-btc/">$5</a><a href="/10-usd-to-btc/">$10</a><a href="/20-usd-to-btc/">$20</a><a href="/25-usd-to-btc/">$25</a><a href="/30-usd-to-btc/">$30</a><a href="/40-usd-to-btc/">$40</a><a href="/50-usd-to-btc/">$50</a><a href="/60-usd-to-btc/">$60</a><a href="/70-usd-to-btc/">$70</a><a href="/80-usd-to-btc/">$80</a><a href="/90-usd-to-btc/">$90</a><a href="/100-usd-to-btc/">$100</a><a href="/200-usd-to-btc/">$200</a><a href="/500-usd-to-btc/">$500</a><a href="/1000-usd-to-btc/">$1,000</a></div>
+<div class="tool-field">
+<label for="usdAmount">Amount in USD</label>
+<input id="usdAmount" class="tool-input" type="text" inputmode="decimal" data-conv-usd-amount
+ value="65159.76" autocomplete="off" spellcheck="false" placeholder="0">
 </div>
-<div class="card"><h2>Other coins</h2>
-<p class="rate">Check the price of 1 of other popular cryptocurrencies:</p>
-<div class="grid"><a href="/price-of-1-trx/">Price of 1 <b>TRX</b></a><a href="/price-of-1-eth/">Price of 1 <b>ETH</b></a><a href="/price-of-1-usdt/">Price of 1 <b>USDT</b></a><a href="/price-of-1-bnb/">Price of 1 <b>BNB</b></a></div>
+<div class="rate-line">
+<span class="live" aria-hidden="true"></span>
+<span class="rate-text">1 <b data-coin-label>BTC</b> =</span>
+<span class="rate-price-wrap">$<input class="rate-price-input" type="text" inputmode="decimal"
+ data-conv-price data-symbol="BTC" value="65159.76487"
+ autocomplete="off" spellcheck="false" aria-label="Price of 1 coin in USD"></span>
+<span class="rate-cur">USD</span>
 </div>
-
-<div class="card"><h2>Frequently asked questions</h2>
-<dl class="faq">
-<dt>What is the price of 1 BTC?</dt>
-<dd>1 BTC currently costs $65,498.90.</dd>
-<dt>What is the price of BTC today?</dt>
-<dd>Bitcoin (BTC) is priced at $65,498.90 today.</dd>
-</dl>
 </div>
-</section></div>
+</section>
+<section class="about">
+<h2>About</h2><p>Convert popular cryptocurrencies to USD and back with live prices. Fast, free, no signup.</p><p>Prices update automatically from live market data and are provided for informational purposes only — not financial advice.</p>
+</section>
+</div>
 <footer>Prices are for informational purposes only. Not financial advice.<br>© 2026 Cryptco</footer>
 <script src="/static/app.js" defer></script>
 </body></html>

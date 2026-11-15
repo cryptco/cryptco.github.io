@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem('cryptco_theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
 <title>Cryptco — Live Crypto Prices &amp; USD Converter</title>
 <meta name="description" content="Convert popular cryptocurrencies to USD and back with live prices. Fast, free, no signup.">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -32,42 +34,47 @@
 </head>
 <body data-site="https://cryptco.github.io"><header>
 <a class="brand" href="/">Cryptco<span>.</span></a>
-<nav><a href="/">Home</a> &nbsp; <a href="/sitemap.xml">All prices</a></nav>
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme" title="Toggle light / dark">
+<span class="theme-icon" aria-hidden="true"></span>
+</button>
 </header>
-<div class="wrap"><section>
-<h1>Live Crypto Prices &amp; USD Converter</h1>
-<p class="sub">Check the price of popular coins and convert between crypto and USD instantly.</p>
-
-<div class="card hero">
-<h2>Convert any amount</h2>
-<div class="conv">
-<label class="field"><span>Coin</span>
-<select class="conv-coin" data-conv-coin><option value="TRX">TRON (TRX)</option><option value="BTC">Bitcoin (BTC)</option><option value="ETH">Ethereum (ETH)</option><option value="USDT">Tether (USDT)</option><option value="BNB">BNB (BNB)</option></select></label>
-<label class="field"><span>Amount</span>
-<input type="text" inputmode="decimal" class="conv-amount" data-conv-amount value="1" autocomplete="off" spellcheck="false"></label>
-<label class="field"><span>Price of 1 (USD)</span>
-<input type="text" inputmode="decimal" class="conv-price" data-conv-price data-symbol="TRX" value="0.3068486362" autocomplete="off" spellcheck="false"></label>
+<div class="wrap">
+<section class="hero">
+<h1>Crypto to USD Converter</h1>
+<p class="sub">Pick a coin and convert between crypto and USD instantly.</p>
+<div class="tool" data-conv data-symbol="TRX">
+<div class="tool-field coin-field">
+<label for="coinSearch">Coin</label>
+<div class="coin-picker">
+<input id="coinSearch" class="coin-search" type="text" autocomplete="off" spellcheck="false"
+ placeholder="Search coin…" aria-label="Search or choose a coin">
+<select class="coin-select" data-conv-coin aria-label="Coin"><option value="TRX" data-name="TRON" selected>TRON (TRX)</option><option value="BTC" data-name="Bitcoin">Bitcoin (BTC)</option><option value="ETH" data-name="Ethereum">Ethereum (ETH)</option><option value="USDT" data-name="Tether">Tether (USDT)</option><option value="BNB" data-name="BNB">BNB (BNB)</option></select>
 </div>
-<div class="result" data-conv-result data-mode="coin" data-symbol="TRX">—</div>
-<p class="rate"><span class="live"></span>Edit any field to convert instantly</p>
 </div>
-<div class="card"><h2>Live prices</h2>
-<table><tr><th>Coin</th><th>Price (USD) — editable</th></tr><tr><td><a href="/price-of-1-trx/"><b>TRON</b> (TRX)</a></td><td><input type="text" inputmode="decimal" class="conv-price inline" data-conv-price data-symbol="TRX" value="0.3068486362" autocomplete="off" spellcheck="false"></td></tr><tr><td><a href="/price-of-1-btc/"><b>Bitcoin</b> (BTC)</a></td><td><input type="text" inputmode="decimal" class="conv-price inline" data-conv-price data-symbol="BTC" value="65498.89622" autocomplete="off" spellcheck="false"></td></tr><tr><td><a href="/price-of-1-eth/"><b>Ethereum</b> (ETH)</a></td><td><input type="text" inputmode="decimal" class="conv-price inline" data-conv-price data-symbol="ETH" value="1832.595671" autocomplete="off" spellcheck="false"></td></tr><tr><td><a href="/price-of-1-usdt/"><b>Tether</b> (USDT)</a></td><td><input type="text" inputmode="decimal" class="conv-price inline" data-conv-price data-symbol="USDT" value="0.9994401481" autocomplete="off" spellcheck="false"></td></tr><tr><td><a href="/price-of-1-bnb/"><b>BNB</b> (BNB)</a></td><td><input type="text" inputmode="decimal" class="conv-price inline" data-conv-price data-symbol="BNB" value="596.1594875" autocomplete="off" spellcheck="false"></td></tr></table>
+<div class="tool-field">
+<label for="coinAmount">Amount in <span data-coin-label>TRX</span></label>
+<input id="coinAmount" class="tool-input" type="text" inputmode="decimal" data-conv-coin-amount
+ value="1" autocomplete="off" spellcheck="false" placeholder="0">
 </div>
-<div class="card"><h2>Popular coins</h2><div class="grid"><a href="/price-of-1-trx/">Price of 1 <b>TRX</b></a><a href="/price-of-1-btc/">Price of 1 <b>BTC</b></a><a href="/price-of-1-eth/">Price of 1 <b>ETH</b></a><a href="/price-of-1-usdt/">Price of 1 <b>USDT</b></a><a href="/price-of-1-bnb/">Price of 1 <b>BNB</b></a></div></div>
-<div class="card"><h2>Popular conversions</h2>
-<div class="grid"><a href="/1-trx-to-usd/"><b>1 TRX</b> to USD</a><a href="/5-trx-to-usd/"><b>5 TRX</b> to USD</a><a href="/10-trx-to-usd/"><b>10 TRX</b> to USD</a><a href="/20-trx-to-usd/"><b>20 TRX</b> to USD</a><a href="/50-trx-to-usd/"><b>50 TRX</b> to USD</a><a href="/100-trx-to-usd/"><b>100 TRX</b> to USD</a></div>
+<div class="tool-field">
+<label for="usdAmount">Amount in USD</label>
+<input id="usdAmount" class="tool-input" type="text" inputmode="decimal" data-conv-usd-amount
+ value="0.31" autocomplete="off" spellcheck="false" placeholder="0">
 </div>
-
-<div class="card"><h2>About Cryptco</h2>
-<dl class="faq">
-<dt>How often are prices updated?</dt>
-<dd>Prices refresh automatically from live market data — no page reload needed.</dd>
-<dt>Is Cryptco free to use?</dt>
-<dd>Yes. All conversions and price pages are free and require no signup.</dd>
-</dl>
+<div class="rate-line">
+<span class="live" aria-hidden="true"></span>
+<span class="rate-text">1 <b data-coin-label>TRX</b> =</span>
+<span class="rate-price-wrap">$<input class="rate-price-input" type="text" inputmode="decimal"
+ data-conv-price data-symbol="TRX" value="0.3068607522"
+ autocomplete="off" spellcheck="false" aria-label="Price of 1 coin in USD"></span>
+<span class="rate-cur">USD</span>
 </div>
-</section></div>
+</div>
+</section>
+<section class="about">
+<h2>About</h2><p>Convert popular cryptocurrencies to USD and back with live prices. Fast, free, no signup.</p><p>Prices update automatically from live market data and are provided for informational purposes only — not financial advice.</p>
+</section>
+</div>
 <footer>Prices are for informational purposes only. Not financial advice.<br>© 2026 Cryptco</footer>
 <script src="/static/app.js" defer></script>
 </body></html>

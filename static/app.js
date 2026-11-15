@@ -8,9 +8,7 @@
   var CACHE_TTL = (CFG.clientCacheSeconds || 8) * 1000;
   var timer = null;
   var inFlight = false;
-
-  // Prices the user typed by hand override the live feed for that coin.
-  var manual = {};
+  var lastPrices = {};
 
   function num(v) {
     if (v == null) return NaN;
@@ -28,85 +26,130 @@
   }
 
   function coinAmt(v) {
-    if (v == null || !isFinite(v)) return "—";
-    var max = v >= 1 ? 4 : 8;
-    return v.toLocaleString("en-US", { maximumFractionDigits: max });
+    if (v == null || !isFinite(v)) return "";
+    var max = v >= 1 ? 6 : 8;
+    return v.toLocaleString("en-US", { maximumFractionDigits: max, useGrouping: false });
   }
 
-  function recalc(scope) {
-    // scope: a card or document. Recompute every converter result within.
-    var roots;
-    if (scope && scope.querySelectorAll) {
-      roots = scope.querySelectorAll("[data-conv-result]");
+  // ---------- theme ----------
+  var THEME_KEY = "cryptco_theme";
+  function applyThemeLabel() {
+    var btn = document.getElementById("themeToggle");
+    if (!btn) return;
+    var t = document.documentElement.getAttribute("data-theme");
+    btn.setAttribute("aria-pressed", t === "light" ? "true" : "false");
+  }
+  function currentIsDark() {
+    var t = document.documentElement.getAttribute("data-theme");
+    if (t === "dark") return true;
+    if (t === "light") return false;
+    return !window.matchMedia || !window.matchMedia("(prefers-color-scheme: light)").matches;
+  }
+  function toggleTheme() {
+    var next = currentIsDark() ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+    applyThemeLabel();
+  }
+
+  // ---------- converter ----------
+  function toolEl() { return document.querySelector("[data-conv]"); }
+
+  function getSymbol() {
+    var tool = toolEl();
+    var sel = tool && tool.querySelector("[data-conv-coin]");
+    return (sel && sel.value) || (tool && tool.getAttribute("data-symbol")) || "";
+  }
+
+  function priceFor(symbol) {
+    var tool = toolEl();
+    var priceInput = tool && tool.querySelector("[data-conv-price]");
+    if (priceInput && priceInput.getAttribute("data-override") === "1") {
+      return num(priceInput.value);
+    }
+    var p = lastPrices[symbol];
+    if (p == null) p = num(priceInput && priceInput.value);
+    return p;
+  }
+
+  function updateCoinLabels(symbol, name) {
+    var tool = toolEl();
+    if (!tool) return;
+    var labels = tool.querySelectorAll("[data-coin-label]");
+    for (var i = 0; i < labels.length; i++) labels[i].textContent = symbol;
+    tool.setAttribute("data-symbol", symbol);
+  }
+
+  function updateRateLine(symbol) {
+    var tool = toolEl();
+    if (!tool) return;
+    var priceInput = tool.querySelector("[data-conv-price]");
+    if (!priceInput) return;
+    var p = priceFor(symbol);
+    if (priceInput.getAttribute("data-override") !== "1") {
+      priceInput.setAttribute("data-symbol", symbol);
+      priceInput.value = (isFinite(p) && p > 0) ? String(p) : "";
+    }
+  }
+
+  function recalc(source) {
+    var tool = toolEl();
+    if (!tool) return;
+    var symbol = getSymbol();
+    var coinEl = tool.querySelector("[data-conv-coin-amount]");
+    var usdEl = tool.querySelector("[data-conv-usd-amount]");
+    var p = priceFor(symbol);
+    if (!isFinite(p) || p <= 0) return;
+    if (source === "usd") {
+      var usd = num(usdEl.value);
+      if (isFinite(usd)) coinEl.value = coinAmt(usd / p);
     } else {
-      roots = document.querySelectorAll("[data-conv-result]");
-    }
-    for (var i = 0; i < roots.length; i++) {
-      var result = roots[i];
-      var card = result.closest(".card");
-      if (!card) continue;
-      var amtEl = card.querySelector("[data-conv-amount]");
-      var priceEl = card.querySelector("[data-conv-price]");
-      var coinSel = card.querySelector("[data-conv-coin]");
-      var mode = result.getAttribute("data-mode") || "coin";
-      var symbol = (coinSel && coinSel.value) || result.getAttribute("data-symbol") || "";
-      var amt = num(amtEl && amtEl.value);
-      var price = num(priceEl && priceEl.value);
-      if (!isFinite(price) || !isFinite(amt)) {
-        result.innerHTML = "—";
-        continue;
-      }
-      if (mode === "usd") {
-        var coins = price > 0 ? amt / price : NaN;
-        result.innerHTML = coinAmt(coins) + " <small>" + symbol + "</small>";
-      } else {
-        var usd = amt * price;
-        result.innerHTML = money(usd) + " <small>USD</small>";
-      }
+      var coin = num(coinEl.value);
+      if (isFinite(coin)) usdEl.value = coinAmt(coin * p);
     }
   }
 
-  function applyPrices(prices) {
-    if (!prices) return;
-    // Update every price input that the user hasn't manually edited.
-    var inputs = document.querySelectorAll("[data-conv-price]");
-    var changed = false;
-    for (var i = 0; i < inputs.length; i++) {
-      var el = inputs[i];
-      var sym = el.getAttribute("data-symbol");
-      if (manual[sym]) continue; // user override wins
-      if (prices[sym] != null) {
-        var next = String(prices[sym]);
-        if (el.value !== next) { el.value = next; changed = true; }
-      }
-    }
-    if (changed) recalc();
+  function onCoinChange() {
+    var symbol = getSymbol();
+    updateCoinLabels(symbol);
+    updateRateLine(symbol);
+    recalc("coin");
   }
 
-  // Recompute on any edit; mark price as manually overridden.
   function onInput(e) {
     var t = e.target;
-    if (t && t.hasAttribute && t.hasAttribute("data-conv-price")) {
-      manual[t.getAttribute("data-symbol")] = true;
+    if (!t || !t.hasAttribute) return;
+    if (t.hasAttribute("data-conv-price")) {
+      t.setAttribute("data-override", "1");
+      var sym = t.getAttribute("data-symbol");
+      lastPrices[sym] = num(t.value);
+      recalc("coin");
+      return;
     }
-    if (t && t.hasAttribute && t.hasAttribute("data-conv-coin")) {
-      // switching coin on the home converter: adopt live price if available
-      var sym = t.value;
-      var card = t.closest(".card");
-      var priceEl = card && card.querySelector("[data-conv-price]");
-      var result = card && card.querySelector("[data-conv-result]");
-      if (priceEl) priceEl.setAttribute("data-symbol", sym);
-      if (result) result.setAttribute("data-symbol", sym);
-      if (priceEl && !manual[sym]) {
-        var p = lastPrices[sym];
-        if (p != null) priceEl.value = String(p);
-      }
-    }
-    recalc(t && t.closest ? t.closest(".card") : null);
+    if (t.hasAttribute("data-conv-usd-amount")) { recalc("usd"); return; }
+    if (t.hasAttribute("data-conv-coin-amount")) { recalc("coin"); return; }
   }
 
-  var lastPrices = {};
+  function onSearch(e) {
+    var q = (e.target.value || "").trim().toLowerCase();
+    var tool = toolEl();
+    var sel = tool && tool.querySelector("[data-conv-coin]");
+    if (!sel) return;
+    var firstMatch = null;
+    for (var i = 0; i < sel.options.length; i++) {
+      var opt = sel.options[i];
+      var text = (opt.textContent || "").toLowerCase();
+      var match = !q || text.indexOf(q) !== -1;
+      opt.hidden = !match;
+      if (match && !firstMatch) firstMatch = opt;
+    }
+    if (q && firstMatch) {
+      sel.value = firstMatch.value;
+      onCoinChange();
+    }
+  }
 
+  // ---------- price feed ----------
   function readCache() {
     try {
       var raw = localStorage.getItem(CACHE_KEY);
@@ -116,17 +159,22 @@
       return obj.data;
     } catch (e) { return null; }
   }
-
   function writeCache(data) {
     try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: data })); } catch (e) {}
   }
-
   function gotPrices(prices) {
     if (!prices || typeof prices !== "object") return;
     lastPrices = prices;
-    applyPrices(prices);
+    var symbol = getSymbol();
+    var tool = toolEl();
+    var priceInput = tool && tool.querySelector("[data-conv-price]");
+    if (priceInput && priceInput.getAttribute("data-override") !== "1") {
+      updateRateLine(symbol);
+      recalc("coin");
+    } else {
+      updateRateLine(symbol);
+    }
   }
-
   function fetchPrices() {
     if (!ENDPOINT || inFlight) return;
     var cached = readCache();
@@ -137,19 +185,40 @@
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (data) {
         var prices = data && (data.prices || data);
-        if (prices && typeof prices === "object") {
-          gotPrices(prices);
-          writeCache(prices);
-        }
+        if (prices && typeof prices === "object") { gotPrices(prices); writeCache(prices); }
       })
       .catch(function () {})
       .then(function () { inFlight = false; });
   }
 
-  function start() {
+  function init() {
+    var btn = document.getElementById("themeToggle");
+    if (btn) btn.addEventListener("click", toggleTheme);
+    if (!window.matchMedia) applyThemeLabel();
+    if (window.matchMedia) {
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      if (mq.addEventListener) mq.addEventListener("change", applyThemeLabel);
+    }
+    applyThemeLabel();
+
     document.addEventListener("input", onInput, true);
-    document.addEventListener("change", onInput, true);
-    recalc();
+    document.addEventListener("change", function (e) {
+      var t = e.target;
+      if (t && t.hasAttribute && t.hasAttribute("data-conv-coin")) onCoinChange();
+    }, true);
+
+    var search = document.getElementById("coinSearch");
+    if (search) search.addEventListener("input", onSearch);
+
+    // initialize symbol from URL pre-selection (markup already sets it)
+    var sel = toolEl() && toolEl().querySelector("[data-conv-coin]");
+    if (sel) {
+      var wanted = toolEl().getAttribute("data-symbol");
+      if (wanted) sel.value = wanted;
+      updateCoinLabels(sel.value || wanted);
+      updateRateLine(sel.value || wanted);
+    }
+    recalc("coin");
     fetchPrices();
     if (timer) clearInterval(timer);
     timer = setInterval(fetchPrices, POLL_MS);
@@ -159,8 +228,8 @@
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", start);
+    document.addEventListener("DOMContentLoaded", init);
   } else {
-    start();
+    init();
   }
 })();
