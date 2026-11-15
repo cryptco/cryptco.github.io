@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cryptco.github.io/sitemap.xml
