@@ -1,1 +1,166 @@
-KGZ1bmN0aW9uICgpIHsKICAidXNlIHN0cmljdCI7CgogIHZhciBDRkcgPSB3aW5kb3cuQ1JZUFRDT19DT05GSUcgfHwge307CiAgdmFyIEVORFBPSU5UID0gQ0ZHLmVuZHBvaW50IHx8ICIiOwogIHZhciBQT0xMX01TID0gKENGRy5wb2xsU2Vjb25kcyB8fCAxMCkgKiAxMDAwOwogIHZhciBDQUNIRV9LRVkgPSAiY3J5cHRjb19wcmljZXNfdjEiOwogIHZhciBDQUNIRV9UVEwgPSAoQ0ZHLmNsaWVudENhY2hlU2Vjb25kcyB8fCA4KSAqIDEwMDA7CiAgdmFyIHRpbWVyID0gbnVsbDsKICB2YXIgaW5GbGlnaHQgPSBmYWxzZTsKCiAgLy8gUHJpY2VzIHRoZSB1c2VyIHR5cGVkIGJ5IGhhbmQgb3ZlcnJpZGUgdGhlIGxpdmUgZmVlZCBmb3IgdGhhdCBjb2luLgogIHZhciBtYW51YWwgPSB7fTsKCiAgZnVuY3Rpb24gbnVtKHYpIHsKICAgIGlmICh2ID09IG51bGwpIHJldHVybiBOYU47CiAgICB2YXIgbiA9IHBhcnNlRmxvYXQoU3RyaW5nKHYpLnJlcGxhY2UoL1teMC05LlwtXS9nLCAiIikpOwogICAgcmV0dXJuIGlzRmluaXRlKG4pID8gbiA6IE5hTjsKICB9CgogIGZ1bmN0aW9uIG1vbmV5KHYpIHsKICAgIGlmICh2ID09IG51bGwgfHwgIWlzRmluaXRlKHYpKSByZXR1cm4gIuKAlCI7CiAgICBpZiAodiA+PSAxKSB7CiAgICAgIHJldHVybiAiJCIgKyB2LnRvTG9jYWxlU3RyaW5nKCJlbi1VUyIsIHsgbWluaW11bUZyYWN0aW9uRGlnaXRzOiAyLCBtYXhpbXVtRnJhY3Rpb25EaWdpdHM6IDIgfSk7CiAgICB9CiAgICByZXR1cm4gIiQiICsgdi50b0xvY2FsZVN0cmluZygiZW4tVVMiLCB7IG1pbmltdW1GcmFjdGlvbkRpZ2l0czogMiwgbWF4aW11bUZyYWN0aW9uRGlnaXRzOiA4IH0pCiAgICAgIC5yZXBsYWNlKC8wKyQvLCAiIikucmVwbGFjZSgvXC4kLywgIiIpOwogIH0KCiAgZnVuY3Rpb24gY29pbkFtdCh2KSB7CiAgICBpZiAodiA9PSBudWxsIHx8ICFpc0Zpbml0ZSh2KSkgcmV0dXJuICLigJQiOwogICAgdmFyIG1heCA9IHYgPj0gMSA/IDQgOiA4OwogICAgcmV0dXJuIHYudG9Mb2NhbGVTdHJpbmcoImVuLVVTIiwgeyBtYXhpbXVtRnJhY3Rpb25EaWdpdHM6IG1heCB9KTsKICB9CgogIGZ1bmN0aW9uIHJlY2FsYyhzY29wZSkgewogICAgLy8gc2NvcGU6IGEgY2FyZCBvciBkb2N1bWVudC4gUmVjb21wdXRlIGV2ZXJ5IGNvbnZlcnRlciByZXN1bHQgd2l0aGluLgogICAgdmFyIHJvb3RzOwogICAgaWYgKHNjb3BlICYmIHNjb3BlLnF1ZXJ5U2VsZWN0b3JBbGwpIHsKICAgICAgcm9vdHMgPSBzY29wZS5xdWVyeVNlbGVjdG9yQWxsKCJbZGF0YS1jb252LXJlc3VsdF0iKTsKICAgIH0gZWxzZSB7CiAgICAgIHJvb3RzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgiW2RhdGEtY29udi1yZXN1bHRdIik7CiAgICB9CiAgICBmb3IgKHZhciBpID0gMDsgaSA8IHJvb3RzLmxlbmd0aDsgaSsrKSB7CiAgICAgIHZhciByZXN1bHQgPSByb290c1tpXTsKICAgICAgdmFyIGNhcmQgPSByZXN1bHQuY2xvc2VzdCgiLmNhcmQiKTsKICAgICAgaWYgKCFjYXJkKSBjb250aW51ZTsKICAgICAgdmFyIGFtdEVsID0gY2FyZC5xdWVyeVNlbGVjdG9yKCJbZGF0YS1jb252LWFtb3VudF0iKTsKICAgICAgdmFyIHByaWNlRWwgPSBjYXJkLnF1ZXJ5U2VsZWN0b3IoIltkYXRhLWNvbnYtcHJpY2VdIik7CiAgICAgIHZhciBjb2luU2VsID0gY2FyZC5xdWVyeVNlbGVjdG9yKCJbZGF0YS1jb252LWNvaW5dIik7CiAgICAgIHZhciBtb2RlID0gcmVzdWx0LmdldEF0dHJpYnV0ZSgiZGF0YS1tb2RlIikgfHwgImNvaW4iOwogICAgICB2YXIgc3ltYm9sID0gKGNvaW5TZWwgJiYgY29pblNlbC52YWx1ZSkgfHwgcmVzdWx0LmdldEF0dHJpYnV0ZSgiZGF0YS1zeW1ib2wiKSB8fCAiIjsKICAgICAgdmFyIGFtdCA9IG51bShhbXRFbCAmJiBhbXRFbC52YWx1ZSk7CiAgICAgIHZhciBwcmljZSA9IG51bShwcmljZUVsICYmIHByaWNlRWwudmFsdWUpOwogICAgICBpZiAoIWlzRmluaXRlKHByaWNlKSB8fCAhaXNGaW5pdGUoYW10KSkgewogICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSAi4oCUIjsKICAgICAgICBjb250aW51ZTsKICAgICAgfQogICAgICBpZiAobW9kZSA9PT0gInVzZCIpIHsKICAgICAgICB2YXIgY29pbnMgPSBwcmljZSA+IDAgPyBhbXQgLyBwcmljZSA6IE5hTjsKICAgICAgICByZXN1bHQuaW5uZXJIVE1MID0gY29pbkFtdChjb2lucykgKyAiIDxzbWFsbD4iICsgc3ltYm9sICsgIjwvc21hbGw+IjsKICAgICAgfSBlbHNlIHsKICAgICAgICB2YXIgdXNkID0gYW10ICogcHJpY2U7CiAgICAgICAgcmVzdWx0LmlubmVySFRNTCA9IG1vbmV5KHVzZCkgKyAiIDxzbWFsbD5VU0Q8L3NtYWxsPiI7CiAgICAgIH0KICAgIH0KICB9CgogIGZ1bmN0aW9uIGFwcGx5UHJpY2VzKHByaWNlcykgewogICAgaWYgKCFwcmljZXMpIHJldHVybjsKICAgIC8vIFVwZGF0ZSBldmVyeSBwcmljZSBpbnB1dCB0aGF0IHRoZSB1c2VyIGhhc24ndCBtYW51YWxseSBlZGl0ZWQuCiAgICB2YXIgaW5wdXRzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgiW2RhdGEtY29udi1wcmljZV0iKTsKICAgIHZhciBjaGFuZ2VkID0gZmFsc2U7CiAgICBmb3IgKHZhciBpID0gMDsgaSA8IGlucHV0cy5sZW5ndGg7IGkrKykgewogICAgICB2YXIgZWwgPSBpbnB1dHNbaV07CiAgICAgIHZhciBzeW0gPSBlbC5nZXRBdHRyaWJ1dGUoImRhdGEtc3ltYm9sIik7CiAgICAgIGlmIChtYW51YWxbc3ltXSkgY29udGludWU7IC8vIHVzZXIgb3ZlcnJpZGUgd2lucwogICAgICBpZiAocHJpY2VzW3N5bV0gIT0gbnVsbCkgewogICAgICAgIHZhciBuZXh0ID0gU3RyaW5nKHByaWNlc1tzeW1dKTsKICAgICAgICBpZiAoZWwudmFsdWUgIT09IG5leHQpIHsgZWwudmFsdWUgPSBuZXh0OyBjaGFuZ2VkID0gdHJ1ZTsgfQogICAgICB9CiAgICB9CiAgICBpZiAoY2hhbmdlZCkgcmVjYWxjKCk7CiAgfQoKICAvLyBSZWNvbXB1dGUgb24gYW55IGVkaXQ7IG1hcmsgcHJpY2UgYXMgbWFudWFsbHkgb3ZlcnJpZGRlbi4KICBmdW5jdGlvbiBvbklucHV0KGUpIHsKICAgIHZhciB0ID0gZS50YXJnZXQ7CiAgICBpZiAodCAmJiB0Lmhhc0F0dHJpYnV0ZSAmJiB0Lmhhc0F0dHJpYnV0ZSgiZGF0YS1jb252LXByaWNlIikpIHsKICAgICAgbWFudWFsW3QuZ2V0QXR0cmlidXRlKCJkYXRhLXN5bWJvbCIpXSA9IHRydWU7CiAgICB9CiAgICBpZiAodCAmJiB0Lmhhc0F0dHJpYnV0ZSAmJiB0Lmhhc0F0dHJpYnV0ZSgiZGF0YS1jb252LWNvaW4iKSkgewogICAgICAvLyBzd2l0Y2hpbmcgY29pbiBvbiB0aGUgaG9tZSBjb252ZXJ0ZXI6IGFkb3B0IGxpdmUgcHJpY2UgaWYgYXZhaWxhYmxlCiAgICAgIHZhciBzeW0gPSB0LnZhbHVlOwogICAgICB2YXIgY2FyZCA9IHQuY2xvc2VzdCgiLmNhcmQiKTsKICAgICAgdmFyIHByaWNlRWwgPSBjYXJkICYmIGNhcmQucXVlcnlTZWxlY3RvcigiW2RhdGEtY29udi1wcmljZV0iKTsKICAgICAgdmFyIHJlc3VsdCA9IGNhcmQgJiYgY2FyZC5xdWVyeVNlbGVjdG9yKCJbZGF0YS1jb252LXJlc3VsdF0iKTsKICAgICAgaWYgKHByaWNlRWwpIHByaWNlRWwuc2V0QXR0cmlidXRlKCJkYXRhLXN5bWJvbCIsIHN5bSk7CiAgICAgIGlmIChyZXN1bHQpIHJlc3VsdC5zZXRBdHRyaWJ1dGUoImRhdGEtc3ltYm9sIiwgc3ltKTsKICAgICAgaWYgKHByaWNlRWwgJiYgIW1hbnVhbFtzeW1dKSB7CiAgICAgICAgdmFyIHAgPSBsYXN0UHJpY2VzW3N5bV07CiAgICAgICAgaWYgKHAgIT0gbnVsbCkgcHJpY2VFbC52YWx1ZSA9IFN0cmluZyhwKTsKICAgICAgfQogICAgfQogICAgcmVjYWxjKHQgJiYgdC5jbG9zZXN0ID8gdC5jbG9zZXN0KCIuY2FyZCIpIDogbnVsbCk7CiAgfQoKICB2YXIgbGFzdFByaWNlcyA9IHt9OwoKICBmdW5jdGlvbiByZWFkQ2FjaGUoKSB7CiAgICB0cnkgewogICAgICB2YXIgcmF3ID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oQ0FDSEVfS0VZKTsKICAgICAgaWYgKCFyYXcpIHJldHVybiBudWxsOwogICAgICB2YXIgb2JqID0gSlNPTi5wYXJzZShyYXcpOwogICAgICBpZiAoIW9iaiB8fCAhb2JqLnRzIHx8IChEYXRlLm5vdygpIC0gb2JqLnRzKSA+IENBQ0hFX1RUTCkgcmV0dXJuIG51bGw7CiAgICAgIHJldHVybiBvYmouZGF0YTsKICAgIH0gY2F0Y2ggKGUpIHsgcmV0dXJuIG51bGw7IH0KICB9CgogIGZ1bmN0aW9uIHdyaXRlQ2FjaGUoZGF0YSkgewogICAgdHJ5IHsgbG9jYWxTdG9yYWdlLnNldEl0ZW0oQ0FDSEVfS0VZLCBKU09OLnN0cmluZ2lmeSh7IHRzOiBEYXRlLm5vdygpLCBkYXRhOiBkYXRhIH0pKTsgfSBjYXRjaCAoZSkge30KICB9CgogIGZ1bmN0aW9uIGdvdFByaWNlcyhwcmljZXMpIHsKICAgIGlmICghcHJpY2VzIHx8IHR5cGVvZiBwcmljZXMgIT09ICJvYmplY3QiKSByZXR1cm47CiAgICBsYXN0UHJpY2VzID0gcHJpY2VzOwogICAgYXBwbHlQcmljZXMocHJpY2VzKTsKICB9CgogIGZ1bmN0aW9uIGZldGNoUHJpY2VzKCkgewogICAgaWYgKCFFTkRQT0lOVCB8fCBpbkZsaWdodCkgcmV0dXJuOwogICAgdmFyIGNhY2hlZCA9IHJlYWRDYWNoZSgpOwogICAgaWYgKGNhY2hlZCkgeyBnb3RQcmljZXMoY2FjaGVkKTsgcmV0dXJuOyB9CiAgICBpbkZsaWdodCA9IHRydWU7CiAgICB2YXIgdXJsID0gRU5EUE9JTlQgKyAoRU5EUE9JTlQuaW5kZXhPZigiPyIpID09PSAtMSA/ICI/IiA6ICImIikgKyAidD0iICsgRGF0ZS5ub3coKTsKICAgIGZldGNoKHVybCwgeyBjYWNoZTogIm5vLXN0b3JlIiwgbW9kZTogImNvcnMiIH0pCiAgICAgIC50aGVuKGZ1bmN0aW9uIChyKSB7IHJldHVybiByLm9rID8gci5qc29uKCkgOiBudWxsOyB9KQogICAgICAudGhlbihmdW5jdGlvbiAoZGF0YSkgewogICAgICAgIHZhciBwcmljZXMgPSBkYXRhICYmIChkYXRhLnByaWNlcyB8fCBkYXRhKTsKICAgICAgICBpZiAocHJpY2VzICYmIHR5cGVvZiBwcmljZXMgPT09ICJvYmplY3QiKSB7CiAgICAgICAgICBnb3RQcmljZXMocHJpY2VzKTsKICAgICAgICAgIHdyaXRlQ2FjaGUocHJpY2VzKTsKICAgICAgICB9CiAgICAgIH0pCiAgICAgIC5jYXRjaChmdW5jdGlvbiAoKSB7fSkKICAgICAgLnRoZW4oZnVuY3Rpb24gKCkgeyBpbkZsaWdodCA9IGZhbHNlOyB9KTsKICB9CgogIGZ1bmN0aW9uIHN0YXJ0KCkgewogICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigiaW5wdXQiLCBvbklucHV0LCB0cnVlKTsKICAgIGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoImNoYW5nZSIsIG9uSW5wdXQsIHRydWUpOwogICAgcmVjYWxjKCk7CiAgICBmZXRjaFByaWNlcygpOwogICAgaWYgKHRpbWVyKSBjbGVhckludGVydmFsKHRpbWVyKTsKICAgIHRpbWVyID0gc2V0SW50ZXJ2YWwoZmV0Y2hQcmljZXMsIFBPTExfTVMpOwogICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigidmlzaWJpbGl0eWNoYW5nZSIsIGZ1bmN0aW9uICgpIHsKICAgICAgaWYgKGRvY3VtZW50LnZpc2liaWxpdHlTdGF0ZSA9PT0gInZpc2libGUiKSBmZXRjaFByaWNlcygpOwogICAgfSk7CiAgfQoKICBpZiAoZG9jdW1lbnQucmVhZHlTdGF0ZSA9PT0gImxvYWRpbmciKSB7CiAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCJET01Db250ZW50TG9hZGVkIiwgc3RhcnQpOwogIH0gZWxzZSB7CiAgICBzdGFydCgpOwogIH0KfSkoKTsK
+(function () {
+  "use strict";
+
+  var CFG = window.CRYPTCO_CONFIG || {};
+  var ENDPOINT = CFG.endpoint || "";
+  var POLL_MS = (CFG.pollSeconds || 10) * 1000;
+  var CACHE_KEY = "cryptco_prices_v1";
+  var CACHE_TTL = (CFG.clientCacheSeconds || 8) * 1000;
+  var timer = null;
+  var inFlight = false;
+
+  // Prices the user typed by hand override the live feed for that coin.
+  var manual = {};
+
+  function num(v) {
+    if (v == null) return NaN;
+    var n = parseFloat(String(v).replace(/[^0-9.\-]/g, ""));
+    return isFinite(n) ? n : NaN;
+  }
+
+  function money(v) {
+    if (v == null || !isFinite(v)) return "—";
+    if (v >= 1) {
+      return "$" + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+    return "$" + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 8 })
+      .replace(/0+$/, "").replace(/\.$/, "");
+  }
+
+  function coinAmt(v) {
+    if (v == null || !isFinite(v)) return "—";
+    var max = v >= 1 ? 4 : 8;
+    return v.toLocaleString("en-US", { maximumFractionDigits: max });
+  }
+
+  function recalc(scope) {
+    // scope: a card or document. Recompute every converter result within.
+    var roots;
+    if (scope && scope.querySelectorAll) {
+      roots = scope.querySelectorAll("[data-conv-result]");
+    } else {
+      roots = document.querySelectorAll("[data-conv-result]");
+    }
+    for (var i = 0; i < roots.length; i++) {
+      var result = roots[i];
+      var card = result.closest(".card");
+      if (!card) continue;
+      var amtEl = card.querySelector("[data-conv-amount]");
+      var priceEl = card.querySelector("[data-conv-price]");
+      var coinSel = card.querySelector("[data-conv-coin]");
+      var mode = result.getAttribute("data-mode") || "coin";
+      var symbol = (coinSel && coinSel.value) || result.getAttribute("data-symbol") || "";
+      var amt = num(amtEl && amtEl.value);
+      var price = num(priceEl && priceEl.value);
+      if (!isFinite(price) || !isFinite(amt)) {
+        result.innerHTML = "—";
+        continue;
+      }
+      if (mode === "usd") {
+        var coins = price > 0 ? amt / price : NaN;
+        result.innerHTML = coinAmt(coins) + " <small>" + symbol + "</small>";
+      } else {
+        var usd = amt * price;
+        result.innerHTML = money(usd) + " <small>USD</small>";
+      }
+    }
+  }
+
+  function applyPrices(prices) {
+    if (!prices) return;
+    // Update every price input that the user hasn't manually edited.
+    var inputs = document.querySelectorAll("[data-conv-price]");
+    var changed = false;
+    for (var i = 0; i < inputs.length; i++) {
+      var el = inputs[i];
+      var sym = el.getAttribute("data-symbol");
+      if (manual[sym]) continue; // user override wins
+      if (prices[sym] != null) {
+        var next = String(prices[sym]);
+        if (el.value !== next) { el.value = next; changed = true; }
+      }
+    }
+    if (changed) recalc();
+  }
+
+  // Recompute on any edit; mark price as manually overridden.
+  function onInput(e) {
+    var t = e.target;
+    if (t && t.hasAttribute && t.hasAttribute("data-conv-price")) {
+      manual[t.getAttribute("data-symbol")] = true;
+    }
+    if (t && t.hasAttribute && t.hasAttribute("data-conv-coin")) {
+      // switching coin on the home converter: adopt live price if available
+      var sym = t.value;
+      var card = t.closest(".card");
+      var priceEl = card && card.querySelector("[data-conv-price]");
+      var result = card && card.querySelector("[data-conv-result]");
+      if (priceEl) priceEl.setAttribute("data-symbol", sym);
+      if (result) result.setAttribute("data-symbol", sym);
+      if (priceEl && !manual[sym]) {
+        var p = lastPrices[sym];
+        if (p != null) priceEl.value = String(p);
+      }
+    }
+    recalc(t && t.closest ? t.closest(".card") : null);
+  }
+
+  var lastPrices = {};
+
+  function readCache() {
+    try {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var obj = JSON.parse(raw);
+      if (!obj || !obj.ts || (Date.now() - obj.ts) > CACHE_TTL) return null;
+      return obj.data;
+    } catch (e) { return null; }
+  }
+
+  function writeCache(data) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ ts: Date.now(), data: data })); } catch (e) {}
+  }
+
+  function gotPrices(prices) {
+    if (!prices || typeof prices !== "object") return;
+    lastPrices = prices;
+    applyPrices(prices);
+  }
+
+  function fetchPrices() {
+    if (!ENDPOINT || inFlight) return;
+    var cached = readCache();
+    if (cached) { gotPrices(cached); return; }
+    inFlight = true;
+    var url = ENDPOINT + (ENDPOINT.indexOf("?") === -1 ? "?" : "&") + "t=" + Date.now();
+    fetch(url, { cache: "no-store", mode: "cors" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        var prices = data && (data.prices || data);
+        if (prices && typeof prices === "object") {
+          gotPrices(prices);
+          writeCache(prices);
+        }
+      })
+      .catch(function () {})
+      .then(function () { inFlight = false; });
+  }
+
+  function start() {
+    document.addEventListener("input", onInput, true);
+    document.addEventListener("change", onInput, true);
+    recalc();
+    fetchPrices();
+    if (timer) clearInterval(timer);
+    timer = setInterval(fetchPrices, POLL_MS);
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible") fetchPrices();
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
+})();

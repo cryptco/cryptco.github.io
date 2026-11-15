@@ -1,1 +1,3 @@
-VXNlci1hZ2VudDogKgpBbGxvdzogLwpTaXRlbWFwOiBodHRwczovL2NyeXB0Y28uZ2l0aHViLmlvL3NpdGVtYXAueG1sCg==
+User-agent: *
+Allow: /
+Sitemap: https://cryptco.github.io/sitemap.xml

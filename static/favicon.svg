@@ -1,1 +1,5 @@
-PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSIjMGIwZTE0Ii8+CjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjE5IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmIzMDAiIHN0cm9rZS13aWR0aD0iNSIvPgo8dGV4dCB4PSIzMiIgeT0iNDEiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EsQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmYjMwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QzwvdGV4dD4KPC9zdmc+Cg==
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<rect width="64" height="64" rx="14" fill="#0b0e14"/>
+<circle cx="32" cy="32" r="19" fill="none" stroke="#ffb300" stroke-width="5"/>
+<text x="32" y="41" font-family="Helvetica,Arial,sans-serif" font-size="24" font-weight="700" fill="#ffb300" text-anchor="middle">C</text>
+</svg>
